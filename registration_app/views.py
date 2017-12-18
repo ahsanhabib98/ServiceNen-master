@@ -58,5 +58,5 @@ def edit_profile(request):
             return redirect('/registration_app/profile_details/')
     else:
         form = ProfileForm(instance=profile)
-        return render(request,'registration_app_html/profile.html',{'form':form})
+        return render(request,'registration_app_html/edit_profile.html',{'form':form})
 # Create your views here.
