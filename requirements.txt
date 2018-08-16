@@ -1,0 +1,8 @@
+Django==1.11
+django-crispy-forms==1.7.2
+django-markdown-deux==1.0.5
+django-pagedown==1.0.5
+djangorestframework==3.8.2
+Markdown==2.6.11
+markdown2==2.3.5
+Pillow==5.0.0
