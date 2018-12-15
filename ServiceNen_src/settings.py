@@ -25,7 +25,7 @@ SECRET_KEY = 'l!ayk_3z1nvwqygees_r2=8l0zy88ci9op2li6e7p-t14q6#o5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["sohozogi.com", "www.sohozogi.com"]
 
 
 # Application definition
@@ -76,10 +76,21 @@ WSGI_APPLICATION = 'ServiceNen_src.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sohozogi_service',
+        'USER': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'PASSWORD': '1234',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 
 # Password validation
@@ -123,6 +134,7 @@ LOGIN_REDIRECT_URL = 'home'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"static")
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

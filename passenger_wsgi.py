@@ -1,0 +1,1 @@
+from ServiceNen_src.wsgi import application
