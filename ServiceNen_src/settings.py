@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'ServiceNen_src.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'sohozogi_service',
-        'USER': 'postgres',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': '0167@46101$Rr$',
         'HOST': 'localhost',
-        'PORT': '5432',
-        'PASSWORD': '1234',
+        'PORT': '',
     }
 }
 
@@ -131,9 +131,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'home'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"static")
-]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
